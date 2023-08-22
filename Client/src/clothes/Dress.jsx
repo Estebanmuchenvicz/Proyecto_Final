@@ -1,12 +1,8 @@
 import { MeshStandardMaterial, DoubleSide } from 'three'
 import { useGLTF } from '@react-three/drei'
-import { join } from 'path'; // Importar la función join para construir rutas
-
-// Obtener la ruta absoluta al archivo .glb
-const dressGlbPath = join(import.meta.url, '../assets/models/dress.glb');
 
 export function Dress( props ){
-    const { nodes } = useGLTF( dressGlbPath )
+    const { nodes } = useGLTF( '../assets/models/dress.glb' )
 
     const { clothingColor } = props
 
@@ -25,4 +21,4 @@ export function Dress( props ){
     )
 }
 
-useGLTF.preload( dressGlbPath )
+useGLTF.preload( '../assets/models/dress.glb' )
